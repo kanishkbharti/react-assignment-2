@@ -1,9 +1,9 @@
 import { API, BEARER_TOKEN } from './api';
 import queryString from 'query-string'
 
-export function get(queryParams) {
+export function get(url, queryParams) {
     const query = queryString.stringify(queryParams);
-    return fetch(`${API}/businesses/search${query}`, {
+    return fetch(`${API}${url}?${query}`, {
         headers: {
             Authorization: `Bearer ${BEARER_TOKEN}`,
             Origin: 'localhost',

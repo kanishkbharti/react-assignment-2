@@ -1,0 +1,32 @@
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.business-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.icecream-image {
+  width: 210px;
+  height: 210px;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+.name {
+  justify-self: center;
+  align-self: start;
+}

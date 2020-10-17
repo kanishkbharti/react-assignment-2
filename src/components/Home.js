@@ -1,10 +1,10 @@
 import React from 'react';
-import { useGetBusiness } from '../helpers/useGetBusinesses';
+import { useGetBusinesses } from '../helpers/useGetBusinesses';
 import BusinessListComponent from './Business/BusinessListComponent';
 
 export function Home() {
 
-    const [businesses] = useGetBusiness();
+    const [businesses] = useGetBusinesses();
 
     return (
         <div>
