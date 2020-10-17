@@ -11,22 +11,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 100;
+  background-color: rgb(212, 203, 178);
 }
 .content {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .icecream-image {
+  display: flex;
   width: 210px;
   height: 210px;
   border-radius: 4px;
-  margin-right: 1rem;
+  align-self: flex-start;
+  justify-self: flex-start;
 }
 .name {
-  justify-self: center;
-  align-self: start;
+  font-size: x-large;
+  font-weight: 700;
+  font-style: italic;
+  color: coral;
+}
+.review-container {
+  margin-top: 5px;
+  background-color: azure;
+}
+.review {
+  font-size: large;
+  font-style: italic;
+  color: chocolate;
 }

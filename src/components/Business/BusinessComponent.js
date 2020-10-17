@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Business.css';
-import * as api from "../../request"
+import * as api from "../../helpers/request"
+import FormatQuoteRoundedIcon from '@material-ui/icons/FormatQuoteRounded';
 
 const BusinessComponent = (props) => {
 
     const [review, setReview] = useState({
-        name: "",
-        text: ""
+        name: "Kanishk",
+        text: "Best Ice Cream in the world"
     })
 
     useEffect(() => {
@@ -38,20 +39,20 @@ const BusinessComponent = (props) => {
 
     return (
         <div className="business-container card">
-            <div className="content">
-                <img src={business.image_url} alt='business' className="icecream-image" />
-                <h2 className="name">{business.name}</h2>
-                <div className="address-component">
+            <div className="content card">
+                <img src={business.image_url} alt='business' className="icecream-image  card-img-top" />
+                <div className="address-component card-body">
+                    <h2 className="name card-title">{business.name}</h2>
                     <h4>{business.phone}</h4>
                     {address}
                 </div>
             </div>
-
-            <div className="review-container">
-                <p>{review.name}</p>
-                <p>{review.text}</p>
-            </div>
+            { review.name && <div className="review-container">
+                <p className="review">{review.name}</p>
+                <p><FormatQuoteRoundedIcon style={{ transform: "rotateY(180deg)" }} />{review.text}<FormatQuoteRoundedIcon /></p>
+            </div>}
         </div>
+
     )
 }
 

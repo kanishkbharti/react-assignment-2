@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import * as api from "../request"
+import * as api from "./request"
 
 export const useGetBusinesses = () => {
     const [businesses, setBusinesses] = useState([]);
